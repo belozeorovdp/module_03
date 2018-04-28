@@ -4,4 +4,45 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <welcome-file-list>
+    <welcome-file>form.html</welcome-file>
+  </welcome-file-list>
+
+
+
+  <servlet>
+    <servlet-name>ServletProcessing</servlet-name>
+    <servlet-class>ServletProcessing</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletProcessing</servlet-name>
+    <url-pattern>/processing</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletCreateTable</servlet-name>
+    <servlet-class>ServletCreateTable</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletCreateTable</servlet-name>
+    <url-pattern>/createtable</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletCreateDB</servlet-name>
+    <servlet-class>ServletCreateDB</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletCreateDB</servlet-name>
+    <url-pattern>/createdb</url-pattern>
+  </servlet-mapping>
+
+  ServletCreateDB
+
+
 </web-app>
