@@ -1,4 +1,9 @@
 DataBase\DataBase.class
-ServletCreateTable.class
+ServletDropTable.class
 ServletCreateDB.class
+ServletPlusRowData.class
+ServletDropColumn.class
+ServletCreateTable.class
+ServletDropRow.class
 ServletProcessing.class
+ServletPlusData.class

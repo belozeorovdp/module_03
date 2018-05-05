@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GetForm Servlet</title>
+    <title>Delete Table (rows)</title>
 </head>
+
 <body>
-<h2>Create Table:</h2>
-<form method="POST" action="/createtable">
+<h2>Delete Table (rows):</h2>
+
+<form method="post" action="/servletdroptable">
     <table border="0">
         <tr>
             <td>Name Table</td>
             <td><input name="name" type="text" id="inputNameTable" placeholder="nameTable"/></td>
         </tr>
         <tr>
-            <td>Number of columns</td>
-            <td><input name="columns" type="text" id="Columns" placeholder="columns"/></td>
-        </tr>
-        <tr>
             <td colspan="2"><input type="submit" value="Submit"/></td>
         </tr>
     </table>
 </form>
+
 </body>
 </html>

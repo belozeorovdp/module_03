@@ -1,3 +1,5 @@
+import DataBase.DataBase;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,9 +15,14 @@ public class ServletCreateTable extends HttpServlet
     {
         int id;
         String nameTable = request.getParameter("name");
-        String columns   = request.getParameter("columns");
+        int columns = Integer.parseInt(request.getParameter("columns"));
+        DataBase db = new DataBase();
+        db.createTable(nameTable,columns);
+
         PrintWriter writer = response.getWriter();
-        writer.println("<html><head></head><body>" + "name: " + nameTable + "</br>" + "columns:" + columns + "</body></html>");
+        writer.println("<html><head></head><body>" + "name: " + nameTable + "</br>" + "columns:" + columns + "</br>");
+        writer.println("<a href=\"/index.jsp\">Back</a> </br>");
+        writer.println("</body></html>");
         writer.flush();
         writer.close();
 

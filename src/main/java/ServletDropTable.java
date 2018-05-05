@@ -7,37 +7,20 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class ServletCreateDB extends HttpServlet
+public class ServletDropTable extends HttpServlet
 {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        int id;
+        String nameTable = request.getParameter("name");
         DataBase db = new DataBase();
-        db.CreateDataBase();
-        StringBuilder sb = db.showDataBase();
-        String dbName = db.existDataBase();
-
-//        if (sb == null)
-//        {
-//            sb = new StringBuilder("ERROR");
-//        }
-
+        db.dropTable(nameTable);
         PrintWriter writer = response.getWriter();
-        writer.println("<html><head></head><body> DataBases on Server (jdbc:mysql://localhost:3306/) -> </br> " + sb + "</br>");
-        if (dbName == null)
-        {
-            dbName = "DataBase nor exist";
-        }
-        else
-        {
-            dbName = "DataBase " + dbName + " exist" ;
-        }
-        writer.println(dbName + "</br>");
+        writer.println("<html><head></head><body>");
         writer.println("<a href=\"/index.jsp\">Back</a> </br>");
         writer.println("</body></html>");
-
         writer.flush();
         writer.close();
     }
@@ -47,5 +30,4 @@ public class ServletCreateDB extends HttpServlet
     {
         doGet(request, response);
     }
-
 }

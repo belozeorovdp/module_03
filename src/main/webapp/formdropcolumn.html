@@ -2,19 +2,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>GetForm Servlet</title>
+    <title>Delete column</title>
 </head>
 <body>
-<h2>Create Table:</h2>
-<form method="POST" action="/createtable">
+<h2>Delete column:</h2>
+
+<form method="POST" action="/servletdropcolumn">
     <table border="0">
         <tr>
             <td>Name Table</td>
             <td><input name="name" type="text" id="inputNameTable" placeholder="nameTable"/></td>
         </tr>
         <tr>
-            <td>Number of columns</td>
-            <td><input name="columns" type="text" id="Columns" placeholder="columns"/></td>
+            <td>Name column</td>
+            <td><input name="column" type="text" id="Column" placeholder="column"/></td>
         </tr>
         <tr>
             <td colspan="2"><input type="submit" value="Submit"/></td>
